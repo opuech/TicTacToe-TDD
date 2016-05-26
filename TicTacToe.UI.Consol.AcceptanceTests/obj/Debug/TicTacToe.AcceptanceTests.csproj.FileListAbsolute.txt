@@ -1,0 +1,9 @@
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\TicTacToe.AcceptanceTests.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\TicTacToe.AcceptanceTests.pdb
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\NSubstitute.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\TicTacToe.exe
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\TicTacToe.pdb
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\bin\Debug\NSubstitute.xml
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\obj\Debug\TicTacToe.AcceptanceTests.csprojResolveAssemblyReference.cache
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\obj\Debug\TicTacToe.AcceptanceTests.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Consol.AcceptanceTests\obj\Debug\TicTacToe.AcceptanceTests.pdb

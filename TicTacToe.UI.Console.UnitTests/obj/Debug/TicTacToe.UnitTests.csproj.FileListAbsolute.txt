@@ -1,0 +1,9 @@
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\TicTacToe.UnitTests.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\TicTacToe.UnitTests.pdb
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\NSubstitute.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\TicTacToe.exe
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\TicTacToe.pdb
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\bin\Debug\NSubstitute.xml
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\obj\Debug\TicTacToe.UnitTests.csprojResolveAssemblyReference.cache
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\obj\Debug\TicTacToe.UnitTests.dll
+C:\TicTocToe\proj2\TicTacToe\TicTacToe.UI.Console.UnitTests\obj\Debug\TicTacToe.UnitTests.pdb

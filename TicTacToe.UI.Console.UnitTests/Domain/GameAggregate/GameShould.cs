@@ -10,6 +10,7 @@ using TicTacToe.IDomain.Events;
 using TicTacToe.Infrastructure.Common;
 using TicTacToe.Presentation.UICommands;
 using NSubstitute;
+using TicTacToe.Core.Monad;
 
 namespace TicTacToe.UnitTests.Domain.GameAggregate
 {
@@ -30,7 +31,7 @@ namespace TicTacToe.UnitTests.Domain.GameAggregate
         public void Given_NewGame_With_Player1_When_Game_Starts_Then_Initialization_CurrentPlayerChanged_Event_Is_Sent()
         {
             // Arrange
-            var moqDomainEventChannel = Substitute.For<IDomainEventChannel>();
+            var moqDomainEventChannel = MaybeConvertions.ToMaybe(Substitute.For<IDomainEventChannel>());
             var gameBuilder = new GameBuilder();
             var sut = gameBuilder.WithPlayer1("Player1").WithPlayer2("dummy").Create(moqDomainEventChannel);
 
@@ -38,7 +39,25 @@ namespace TicTacToe.UnitTests.Domain.GameAggregate
             sut.Start();
 
             // Assert
-            moqDomainEventChannel.Received().Submit<CurrentPlayerChanged>(
+            moqDomainEventChannel.Value.Received().Submit<GameStarted>(
+                new GameStarted(
+                        new GameDto("012345678", "Player1")));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Given_AGame_With_null_Value()
+        {
+            // Arrange
+            var moqDomainEventChannel = MaybeConvertions.ToMaybe(Substitute.For<IDomainEventChannel>());
+            var gameBuilder = new GameBuilder();
+            var sut = gameBuilder.WithPlayer1(null).WithPlayer2(null).Create(moqDomainEventChannel);
+
+            // Act
+            sut.Start();
+
+            // Assert
+            moqDomainEventChannel.Value.Received().Submit<CurrentPlayerChanged>(
                 new CurrentPlayerChanged(
                         new GameDto("012345678", "Player1")));
         }
