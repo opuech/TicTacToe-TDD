@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3ADAB7AC-4471-4D8B-963F-2489D908BAD8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TicTacToe</RootNamespace>
+    <AssemblyName>TicTacToe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\GameService.cs" />
+    <Compile Include="CompositionRootBuilder.cs" />
+    <Compile Include="Core\Immutable.cs" />
+    <Compile Include="Core\Monad\Maybe.cs" />
+    <Compile Include="Core\Monad\MaybeBoolean.cs" />
+    <Compile Include="Core\Monad\MaybeCompositions.cs" />
+    <Compile Include="Core\Monad\MaybeConvertions.cs" />
+    <Compile Include="Core\Monad\MaybeDictionary.cs" />
+    <Compile Include="Core\Monad\MaybeEnumerable.cs" />
+    <Compile Include="Core\Monad\MaybeFunctionalWrappers.cs" />
+    <Compile Include="Core\Monad\MaybeLinq.cs" />
+    <Compile Include="Core\Monad\MaybeReturns.cs" />
+    <Compile Include="Core\Monad\MaybeSideEffects.cs" />
+    <Compile Include="Core\Monad\MaybeSomethingNothingHelpers.cs" />
+    <Compile Include="Core\Result.cs" />
+    <Compile Include="Core\ResultExtension.cs" />
+    <Compile Include="IDomain\Dto\EndOfGameStatus.cs" />
+    <Compile Include="IDomain\Dto\GameDto.cs" />
+    <Compile Include="IDomain\Events\GameStarted.cs" />
+    <Compile Include="IDomain\Events\CurrentPlayerChanged.cs" />
+    <Compile Include="IDomain\Events\IDomainEventChannelFactory.cs" />
+    <Compile Include="Domain\GameAggregate\IGameRepository.cs" />
+    <Compile Include="Infrastructure\Common\DomainEventChannelFactory.cs" />
+    <Compile Include="IDomain\Events\EndOfGameNotification.cs" />
+    <Compile Include="Domain\GameAggregate\GameBuilder.cs" />
+    <Compile Include="IDomain\IGame.cs" />
+    <Compile Include="IDomain\IGameBuilder.cs" />
+    <Compile Include="ICompositionChild.cs" />
+    <Compile Include="CompositionRoot.cs" />
+    <Compile Include="Domain\Common\ValueObject.cs" />
+    <Compile Include="Domain\GameAggregate\Game.cs" />
+    <Compile Include="IDomain\Events\IDomainEventChannel.cs" />
+    <Compile Include="IDomain\Events\IDomainEventHandler.cs" />
+    <Compile Include="Infrastructure\Common\DomainEventChannel.cs" />
+    <Compile Include="Infrastructure\Common\Handler.cs" />
+    <Compile Include="Infrastructure\GameInMemoryRepository.cs" />
+    <Compile Include="UIConsole\Views\Common\UICommandChannelFactory.cs" />
+    <Compile Include="Presentation\Views\IGameViewFactory.cs" />
+    <Compile Include="Presentation\Views\IGameView.cs" />
+    <Compile Include="Presentation\Wrapper\IConsoleWrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\GameAggregate\Grid.cs" />
+    <Compile Include="Domain\GameAggregate\Player.cs" />
+    <Compile Include="Application\FromDomainEventsToViewHandler.cs" />
+    <Compile Include="Presentation\UICommands\IUICommandChannelFactory.cs" />
+    <Compile Include="Presentation\UICommands\IUICommandChannel.cs" />
+    <Compile Include="Presentation\UICommands\IUICommandHandler.cs" />
+    <Compile Include="UIConsole\Views\Common\UICommandChannel.cs" />
+    <Compile Include="Presentation\UICommands\PlayCommand.cs" />
+    <Compile Include="Application\FromUICommandsToDomainHandler.cs" />
+    <Compile Include="UIConsole\Views\GameView.cs" />
+    <Compile Include="UIConsole\Views\GameViewFactory.cs" />
+    <Compile Include="UIConsole\Wrapper\ConsoleWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
